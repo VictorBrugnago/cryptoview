@@ -6,7 +6,7 @@ import {HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutl
 import icon from "../images/cryptoview.png";
 
 const Navbar = () => {
-    const [activeMenu, setActiveMenu] = useState(false);
+    const [activeMenu, setActiveMenu] = useState(true);
     const [screenSize, setScreenSize] = useState(null);
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const Navbar = () => {
 
     useEffect(() => {
         if (screenSize < 768) {
-            setScreenSize(false);
+            setActiveMenu(false);
         } else {
             setActiveMenu(true);
         }
